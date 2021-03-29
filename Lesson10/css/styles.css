@@ -1,0 +1,265 @@
+/*
+COLOR PALETTE
+#F8F0FF - light pink
+#F77984 - dark pink
+#41383B - brown
+#ffffff - white
+*/
+
+
+/* Global styles
+------------------------------------*/
+body{
+  background-color: #F8F0FF;
+}
+
+img {
+	display: block;
+	border: 0;
+	height: auto;
+  width: 100%;
+}
+
+/* Header
+------------------------------------*/
+
+.main-nav
+{
+   height: 75px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: #ffffff;
+   margin-left: -10px;
+   margin-right: -10px;
+   margin-top: -10px;
+   
+}
+.main-nav ul{
+    padding-left: 0;
+}
+
+.main-nav ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+
+}
+.main-nav ul li a{
+    display: block;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    color: #41383B;
+    padding: 10px 28px;
+    text-decoration: none;
+}
+
+/* Title
+------------------------------------*/
+.page-title{
+  background-color: #ffffff;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+  
+  h1{
+    font-family:'Playfair Display', serif;
+    font-size: 100px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #F8F0FF; 
+    margin: 0;
+    color: #F77984;
+    letter-spacing: .05em;     
+  }
+
+  /* Secondary Navigation
+------------------------------------*/
+.secondary-nav
+{
+  background-color: #ffffff;
+   height: 75px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin-right: -10px;
+   margin-left: -10px;
+   
+}
+
+.secondary-nav ul{
+  padding-left: 0;
+}
+
+.secondary-nav ul li{
+  float: left;
+  list-style: none;
+  position: relative;
+
+}
+.secondary-nav ul li a{
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  color: #41383B;
+  padding-left: 28px;
+  padding-right: 28px;
+  text-decoration: none;
+}
+.secondary-nav ul li a:hover{
+  background-color: #F77984;
+  border-radius: 10px;
+  color: #ffffff;
+
+}
+
+/* Main Content
+------------------------------------*/
+
+.cards{
+  list-style-type: none;
+	display: grid;
+	grid-template-columns: 2fr 2fr 2fr;
+	grid-gap: 1em;
+  padding: 0;
+}
+
+.caption {
+	padding: 1em;
+	color: white;
+	font-size: 3em;
+	transition: .4s ease;
+  text-align: center;
+  background: #F77984;
+  opacity: 0;
+}
+
+
+.card{
+  display: grid;
+}
+.card img, .caption{
+  grid-column: 1;
+  grid-row: 1;
+  padding: 0;
+}
+.card:hover .caption{
+  opacity:1;
+}
+
+/* Footer
+------------------------------------*/
+.footer-content{
+    background-color: #F77984;
+    padding-bottom: 15px;
+    margin: -10px;
+}
+
+  h2{
+    font-family:'Playfair Display', serif;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .contact-list{
+    list-style-type: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 23px;
+    display:flex;
+    justify-content: center;
+  }
+
+  .contact-list a{
+      padding: 20px;
+  }
+  
+  a:link{
+    color: #ffffff;
+    text-decoration: none;
+  }
+  a:visited{
+    color: purple;
+    text-decoration: none;
+  }
+  
+  /*Responsive
+------------------------------*/
+
+@media screen and (max-width:1280px) {
+  .cards{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+  
+}
+
+@media screen and (max-width:830px) {
+  .cards{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 2fr;
+  }
+  
+  h1{
+    font-size: 90px;   
+  }
+
+  h2{
+    font-size: 60px;
+  }
+  
+
+  .main-nav ul li a{
+      font-size: 18px;
+  }
+
+  .secondary-nav
+{
+   display: none;
+}
+  .contact-list{
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width:770px) {
+.main-nav ul li:hover{
+  border-top: 2px solid #F77984;
+}
+
+}
+@media screen and (max-width:500px) {
+  .cards{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+ 
+  h1{
+    font-size: 80px;   
+  }
+
+  h2{
+    font-size: 45px;
+  }
+
+  .main-nav ul li a{
+      font-size: 14px;
+  }
+
+  .secondary-nav
+{
+   display: none;
+}
+  .contact-list{
+    font-size: 15px;
+  }
+
+  
+}
+
